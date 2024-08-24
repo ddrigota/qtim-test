@@ -101,6 +101,10 @@ const changePage = (page: number) => {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   row-gap: 44px;
   column-gap: 32px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .post {
@@ -113,6 +117,8 @@ const changePage = (page: number) => {
   gap: 24px;
   text-decoration: none;
   transition: all 0.3s ease;
+  margin: 0 auto;
+
   &:hover {
     transform: translateY(-20px);
     .post__read-more {
@@ -151,6 +157,7 @@ const changePage = (page: number) => {
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 
   button {
     display: flex;

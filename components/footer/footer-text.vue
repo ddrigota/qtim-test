@@ -16,6 +16,11 @@
     margin-top: 56px;
     display: grid;
     grid-template-columns: 2fr 1fr;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
   }
   &__text-subtitle {
     font-size: 112px;
@@ -25,6 +30,10 @@
     text-underline-offset: 10px;
     text-decoration-thickness: 1px;
     text-decoration-skip-ink: all;
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
   }
 }
 </style>

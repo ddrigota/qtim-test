@@ -19,10 +19,22 @@
   padding: 0 40px;
   height: 121px;
   max-width: 1440px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
 }
 .header-nav {
   display: flex;
   align-items: center;
   gap: 91px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
 }
 </style>

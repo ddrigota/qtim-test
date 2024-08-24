@@ -35,10 +35,17 @@ const linksRight = [
 .footer__links {
   display: flex;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    justify-content: space-around;
+  }
   &-left,
   &-right {
     display: flex;
     gap: 32px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 }
 </style>

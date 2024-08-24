@@ -17,6 +17,9 @@
   height: 900px;
   background-color: $color-purple-light;
   padding-bottom: 30px;
+  @media (max-width: 768px) {
+    height: auto;
+  }
   &__container {
     padding: 140px 112px 0;
     width: 100%;
@@ -26,6 +29,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 768px) {
+      padding: 60px 20px 0;
+    }
   }
 }
 </style>

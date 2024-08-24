@@ -42,29 +42,48 @@ if (error.value?.statusCode === 404) {
   display: flex;
   flex-direction: column;
   gap: 80px;
+
+  @media (max-width: 768px) {
+    padding: 60px 20px 40px;
+    gap: 40px;
+  }
+
   &__title {
     font-size: 84px;
     font-weight: 400;
     line-height: 100%;
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
   }
+
   &__text {
     display: flex;
     flex-direction: column;
     gap: 32px;
   }
+
   &__about {
     font-size: 16px;
     font-weight: 400;
     line-height: 100%;
   }
+
   &__description {
     font-size: 36px;
     font-weight: 400;
     line-height: 120%;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
+
   &__image {
     width: 100%;
-    height: 700px;
+    height: auto;
+    max-height: 700px;
     object-fit: cover;
   }
 }

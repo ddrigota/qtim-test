@@ -71,12 +71,23 @@
     position: relative;
     bottom: 42px;
     left: 0px;
+    @media (max-width: 768px) {
+      bottom: 4px;
+      left: 0;
+      font-size: 20px;
+    }
   }
   &:hover {
     transform: scale(1.1);
   }
   &:active {
     animation: gradient 0.2s;
+  }
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+    bottom: 50px;
+    right: calc(50% - 40px);
   }
 }
 </style>
