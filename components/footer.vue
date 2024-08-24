@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__container">
       <FooterText />
-      <div class="footer__links"></div>
+      <FooterLinks />
     </div>
   </footer>
 </template>
@@ -11,9 +11,12 @@
 
 <style scoped lang="scss">
 .footer {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 900px;
   background-color: $color-purple-light;
+  padding-bottom: 30px;
   &__container {
     padding: 140px 112px 0;
     width: 100%;
