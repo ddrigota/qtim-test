@@ -19,20 +19,20 @@
     <div class="pagination">
       <button
         v-if="currentPage > 1"
-        @click="currentPage--"
+        @click="changePage(currentPage - 1)"
         class="arrow-button">
         <ChevronLeft color="#000" />
       </button>
       <button
         v-for="page in displayedPages"
         :key="page"
-        @click="currentPage = page"
+        @click="changePage(page)"
         :class="{ active: currentPage === page }">
         {{ page }}
       </button>
       <button
         v-if="currentPage < totalPages"
-        @click="currentPage++"
+        @click="changePage(currentPage + 1)"
         class="arrow-button">
         <ChevronRight color="#000" />
       </button>
@@ -42,7 +42,9 @@
 
 <script setup lang="ts">
 import { ChevronLeft, ChevronRight } from "lucide-vue-next";
-import { computed, ref } from "vue";
+import { computed, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
+
 interface Post {
   id: string;
   createdAt: string;
@@ -60,7 +62,10 @@ if (error.value) {
   console.error("Error fetching posts:", error.value);
 }
 
-const currentPage = ref(1);
+const route = useRoute();
+const router = useRouter();
+
+const currentPage = computed(() => Number(route.query.page) || 1);
 const postsPerPage = 8;
 
 const totalPages = computed(() => {
@@ -79,6 +84,14 @@ const displayedPages = computed(() => {
   const end = Math.min(totalPages.value, start + 4);
   return Array.from({ length: end - start + 1 }, (_, i) => start + i);
 });
+
+watch(currentPage, newPage => {
+  router.push({ query: { ...route.query, page: newPage.toString() } });
+});
+
+const changePage = (page: number) => {
+  router.push({ query: { ...route.query, page: page.toString() } });
+};
 </script>
 
 <style lang="scss" scoped>
