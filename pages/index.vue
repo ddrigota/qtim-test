@@ -1,6 +1,7 @@
 <template>
   <section class="posts">
     <h1 class="posts__title">Articles</h1>
+    <Posts />
   </section>
 </template>
 
