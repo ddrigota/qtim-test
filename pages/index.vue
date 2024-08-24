@@ -10,7 +10,7 @@
 <style scoped lang="scss">
 .posts {
   flex: 1;
-  padding: 120px 112px;
+  padding: 120px 112px 140px;
   &__title {
     font-size: 84px;
     font-weight: 400;

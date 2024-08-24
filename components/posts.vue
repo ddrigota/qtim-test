@@ -83,7 +83,7 @@ const displayedPages = computed(() => {
 
 <style lang="scss" scoped>
 .posts {
-  margin: 60px 0;
+  margin: 60px 0 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   row-gap: 44px;
@@ -137,7 +137,6 @@ const displayedPages = computed(() => {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
   gap: 8px;
 
   button {
@@ -148,7 +147,7 @@ const displayedPages = computed(() => {
     height: 44px;
     border: currentColor;
     background-color: $color-grey-4;
-    border-radius: 4px;
+    border-radius: 12px;
     cursor: pointer;
 
     &.active {
