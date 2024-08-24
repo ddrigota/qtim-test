@@ -13,7 +13,8 @@
     <NuxtLink
       class="header-buttons__link"
       type="button"
-      to="https://qtim.pro/">
+      to="https://qtim.pro/"
+      external>
       Let's work
     </NuxtLink>
   </div>

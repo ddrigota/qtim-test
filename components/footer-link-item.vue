@@ -3,7 +3,8 @@
     :to="link"
     class="footer-link-item"
     target="_blank"
-    rel="noopener noreferrer">
+    rel="noopener noreferrer"
+    external>
     {{ text }}
   </NuxtLink>
 </template>
