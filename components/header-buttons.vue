@@ -14,7 +14,7 @@
       class="header-buttons__link"
       type="button"
       to="https://qtim.pro/">
-      Let's Work
+      Let's work
     </NuxtLink>
   </div>
 </template>

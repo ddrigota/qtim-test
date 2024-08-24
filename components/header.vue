@@ -12,13 +12,13 @@
 
 <style scoped lang="scss">
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
   height: 121px;
   max-width: 1440px;
-  margin: 0 auto;
 }
 .header-nav {
   display: flex;
