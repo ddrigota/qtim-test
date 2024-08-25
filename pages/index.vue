@@ -16,5 +16,8 @@
     font-weight: 400;
     line-height: 100%;
   }
+  @media (max-width: 768px) {
+    padding: 60px 16px 140px;
+  }
 }
 </style>

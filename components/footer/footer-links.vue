@@ -36,7 +36,7 @@ const linksRight = [
   display: flex;
   justify-content: space-between;
   @media (max-width: 768px) {
-    justify-content: space-around;
+    justify-content: space-between;
   }
   &-left,
   &-right {
